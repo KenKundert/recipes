@@ -39,3 +39,13 @@ Finally, you can get a list of the ingredients using::
     ingredients:
         - 1 cup black glutinous rice
         - 2/3 cup water
+
+
+Installation
+------------
+
+You can install using:
+
+    git clone https://github.com/KenKundert/recipes.git
+    cd recipes
+    pip install .
