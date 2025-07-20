@@ -9,6 +9,7 @@ Usage:
 
 Options:
     --ingredients, -i  just show the list of ingredients
+    --all, -a          allow multiple recipes to be displayed
 """
 
 # IMPORTS {{{1
@@ -68,6 +69,8 @@ def display_recipes(paths):
 def main():
     cmdline = docopt(__doc__.format(db=RECIPES_DATABASE))
     term = cmdline["<term>"].lower()
+    show_all = cmdline["--all"]
+    show_ingredients = cmdline['--ingredients']
     seen = set()
     found = []
 
@@ -90,11 +93,11 @@ def main():
         else:
             fatal(f"no recipes found in {RECIPES_DATABASE}")
 
-    if len(found) > 1:
+    if len(found) > 1 and not show_all:
         highlight("choose from ...")
         for path in found:
             print(path.stem)
-    elif cmdline['--ingredients']:
+    elif show_ingredients:
         display_ingredients(found)
     else:
         display_recipes(found)
