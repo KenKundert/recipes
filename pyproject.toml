@@ -1,0 +1,22 @@
+[project]
+name = "recipe"
+version = "0.0"
+description = "Manage a database of recipes"
+readme = "README.rst"
+authors = [
+    {name = "Kara Kundert"},
+    # {email = "kara@thekunderts.net"}
+]
+requires-python = ">=3.6"
+dependencies = [
+    "docopt",
+    "inform",
+    "nestedtext",
+]
+
+[project.scripts]
+recipe = "recipe.main:main"
+
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
