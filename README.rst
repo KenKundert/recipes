@@ -44,7 +44,7 @@ Finally, you can get a list of the ingredients using::
 Installation
 ------------
 
-You can install using:
+You can install using::
 
     git clone https://github.com/KenKundert/recipes.git
     cd recipes
