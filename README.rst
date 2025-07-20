@@ -2,7 +2,7 @@ Recipes by Kara
 ===============
 
 Recipes are contained in NestedText files, one per file, and the files are 
-placed in the subdirectories of ~/home/recipes.  Recipes should take the form:
+placed in the subdirectories of ~/home/recipes.  Recipes should take the form::
 
     name: glutinous rice
     ingredients:
@@ -33,7 +33,7 @@ so you can narrow down to the one you want using::
 
     > recipe glutinous-rice
 
-Finally, you can get a list of the ingredients using:
+Finally, you can get a list of the ingredients using::
 
     > recipe -i rice
     name: glutinous rice
